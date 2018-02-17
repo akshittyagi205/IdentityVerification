@@ -13,6 +13,11 @@ import android.os.Bundle;
 * push krke b dikha dun ek baar?
 * dikah de
 * push krne k liye kuch change krna zaroori hai
+* aagya smjh sbh?
+* nd haan
+* n jb koi b new file bnegi project me to wo puchega ki add to git?
+* to usko yes krna> hok
+* ab start kr le
 * */
 
 public class MainActivity extends AppCompatActivity {
