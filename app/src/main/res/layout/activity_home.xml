@@ -33,7 +33,7 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@drawable/myshape"
+            android:background="@drawable/shapewhite"
             android:orientation="horizontal">
 
             <ImageView
@@ -56,7 +56,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="2dp"
-            android:background="@drawable/myshape"
+            android:background="@drawable/shapewhite"
             android:orientation="horizontal">
 
             <ImageView
@@ -88,7 +88,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:background="#3B5998"
+            android:background="@drawable/shapefacebook"
+            android:clickable="true"
             android:orientation="horizontal">
 
             <ImageView
@@ -114,7 +115,8 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:background="#4285F4"
+            android:background="@drawable/shapegoogle"
+            android:clickable="true"
             android:orientation="horizontal">
 
             <ImageView
