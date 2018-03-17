@@ -21,14 +21,17 @@
             android:value="@string/facebook_app_id" />
 
         <activity android:name=".HomeActivity">
+
+        </activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".E_KYC_HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".ForgotPasswordActivity"></activity>
     </application>
 
 </manifest>

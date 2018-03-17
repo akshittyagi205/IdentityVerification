@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Identity Verification</string>
     <string name="facebook_app_id">1811850002167656</string>
+    <string name="company_name">Select Company</string>
+
+    <string-array name="country_arrays">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+    </string-array>
 </resources>
