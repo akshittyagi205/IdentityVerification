@@ -31,7 +31,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".BusinessSignup" />
-        <activity android:name=".Verify"></activity>
+        <activity android:name=".Verify" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
