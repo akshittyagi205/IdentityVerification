@@ -13,385 +13,426 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/medium_padding"
-            android:textSize="@dimen/text_very_large"
             android:fontFamily="serif"
+            android:padding="@dimen/medium_padding"
+            android:text="Digital Identity"
             android:textColor="@color/textColorLight"
-            android:text="Digital Identity"/>
+            android:textSize="@dimen/text_very_large" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
             android:paddingLeft="@dimen/medium_padding"
             android:paddingRight="@dimen/medium_padding"
-            android:textSize="@dimen/text_small"
-            android:fontFamily="serif"
+            android:text="Your Digital Identity card can be use as a verification certificate."
             android:textColor="@color/textColorLight"
-            android:text="Your Digital Identity card can be use as a verification certificate."/>
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
-        <LinearLayout
+            android:textSize="@dimen/text_small" />
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/card_back"
-            android:padding="@dimen/medium_padding"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/layout_medium_margin">
+            android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/small_padding"
-                android:background="@drawable/textarea_border"
-                android:orientation="horizontal">
+                android:layout_margin="@dimen/layout_medium_margin"
+                android:background="@drawable/card_back"
+                android:orientation="vertical"
+                android:padding="@dimen/medium_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textarea_border"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/small_padding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="E-Identity  by ERA"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Name"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Akshit Tyagi"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Year of Birth"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/yob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="1996"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Gender"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Male"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="City"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Delhi"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+                </LinearLayout>
+
+            </LinearLayout>
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="bottom"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_medium"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="E-Identity  by ERA"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/small_padding"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Name"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.2"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text=":"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/name"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Akshit Tyagi"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/small_padding"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Year of Birth"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.2"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text=":"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/yob"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="1996"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/small_padding"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Gender"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.2"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text=":"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/gender"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Male"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/small_padding"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="City"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.2"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text=":"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/city"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Delhi"/>
-            </LinearLayout>
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:alpha="0.3"
+                android:src="@drawable/ic_verified" />
+        </FrameLayout>
 
-        </LinearLayout>
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:alpha="0.3"
-        android:src="@drawable/ic_verified"
-        android:layout_gravity="center"/>
-</FrameLayout>
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/card_back"
-            android:padding="@dimen/medium_padding"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/layout_medium_margin">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/small_padding"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
+                android:layout_margin="@dimen/layout_medium_margin"
+                android:background="@drawable/card_back"
+                android:orientation="vertical"
+                android:padding="@dimen/medium_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="House"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.2"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="House"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/house"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="House No-6/282"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text=":"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Street"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/street"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Gali No-6 Nirankari Colony"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/house"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="House No-6/282"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/small_padding"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Locality"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/loc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Nirankari Colony"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Street"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.2"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text=":"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/street"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Gali No-6 Nirankari Colony"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/small_padding"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Locality"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.2"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text=":"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/loc"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Nirankari Colony"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/small_padding"
-                android:orientation="horizontal"
-                android:weightSum="2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="Pincode"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.2"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text=":"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/pin"
-                    android:padding="@dimen/small_padding"
-                    android:textSize="@dimen/text_very_small"
-                    android:textColor="@color/textColorDark"
-                    android:fontFamily="serif"
-                    android:text="110009"/>
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="Pincode"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+
+                    <TextView
+                        android:id="@+id/pin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:padding="@dimen/small_padding"
+                        android:text="110009"
+                        android:textColor="@color/textColorDark"
+                        android:textSize="@dimen/text_very_small" />
+                </LinearLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:alpha="0.3"
-        android:src="@drawable/ic_verified"
-        android:layout_gravity="center"/>
-</FrameLayout>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:alpha="0.3"
+                android:src="@drawable/ic_verified" />
+        </FrameLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
