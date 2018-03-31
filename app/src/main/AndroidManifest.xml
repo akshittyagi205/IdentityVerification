@@ -39,12 +39,10 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".E_KYC_HomeActivity"></activity>
+        <activity android:name=".E_KYC_HomeActivity" />
         <activity android:name=".BusinessSignup" />
         <activity android:name=".Verify" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".ShareDataActivity" />
 
         <provider
@@ -52,11 +50,11 @@
             android:authorities="com.facebook.app.FacebookContentProvider2022272331380833"
             android:exported="true" />
 
-        <activity android:name=".Main2Activity"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".StepperWizardColor"
+        <activity
+            android:name=".Main2Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".StepperWizardColor"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Translucent">
             <intent-filter>
@@ -65,6 +63,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BusinessDashboardActivity"></activity>
     </application>
 
 </manifest>
