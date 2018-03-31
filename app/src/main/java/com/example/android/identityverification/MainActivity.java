@@ -1,5 +1,6 @@
 package com.example.android.identityverification;
 
+import android.app.ProgressDialog;
 import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -24,10 +27,22 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     String tag="home";
     Fragment fragment;
     ImageView home,verify,more;
+    Bundle extra;
+
+    String output;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        extra = getIntent().getExtras();
+        getSupportActionBar().setTitle("Home");
+        output = extra.getString("output");
+        home = (ImageView) findViewById(R.id.home);
+        verify = (ImageView) findViewById(R.id.verify);
+        more = (ImageView) findViewById(R.id.more);
+        home.setOnClickListener(this);
+        verify.setOnClickListener(this);
+        more.setOnClickListener(this);
 //        Bundle params = new Bundle();
 //        params.putString("message", "This is a test message");
 ///* make the API call */
@@ -42,21 +57,14 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 //                    }
 //                }
 //        ).executeAsync();
-        ShareLinkContent content = new ShareLinkContent.Builder()
-                .setContentUrl(Uri.parse(""))
-                .build();
-        ShareDialog.show(this,content);
+
         fragmentManager = getSupportFragmentManager();  fragmentManager = getSupportFragmentManager();
-        fragment= new HomeFragment();
-        home = (ImageView) findViewById(R.id.home);
-        verify = (ImageView) findViewById(R.id.verify);
-        more = (ImageView) findViewById(R.id.more);
-        home.setOnClickListener(this);
-        verify.setOnClickListener(this);
-        more.setOnClickListener(this);
+        fragment= HomeFragment.newInstance(output);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(android.R.anim.fade_in,android.R.anim.fade_out);
         transaction.replace(R.id.container,fragment).commit();
+
+
 
 
     }
@@ -64,6 +72,24 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.home_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.fb){
+            ShareLinkContent content = new ShareLinkContent.Builder()
+                    .setContentUrl(Uri.parse(""))
+                    .build();
+            ShareDialog.show(this,content);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -79,14 +105,16 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         }
         if(view==home){
             tag="home";
+            getSupportActionBar().setTitle("Home");
             home.setColorFilter(getResources().getColor(R.color.grey_3), PorterDuff.Mode.SRC_IN);
-            fragment= new HomeFragment();
+            fragment=HomeFragment.newInstance(output);
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             transaction.setCustomAnimations(android.R.anim.fade_in,android.R.anim.fade_out);
             transaction.replace(R.id.container,fragment).commit();
         }
         else if(view==verify){
             tag="verify";
+            getSupportActionBar().setTitle("Verification");
             verify.setColorFilter(getResources().getColor(R.color.grey_3), PorterDuff.Mode.SRC_IN);
             fragment= new VerifyFragment();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -95,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         }
         else if(view==more){
             tag="more";
+            getSupportActionBar().setTitle("More");
             more.setColorFilter(getResources().getColor(R.color.grey_3), PorterDuff.Mode.SRC_IN);
             fragment= new MoreFragment();
             FragmentTransaction transaction = fragmentManager.beginTransaction();

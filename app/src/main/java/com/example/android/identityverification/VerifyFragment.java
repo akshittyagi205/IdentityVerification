@@ -95,7 +95,7 @@ public class VerifyFragment extends Fragment {
                 ((AppCompatButton) dialog.findViewById(R.id.btnJoin)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        startActivity(new Intent(getActivity(),Verify.class));
                     }
                 });
 

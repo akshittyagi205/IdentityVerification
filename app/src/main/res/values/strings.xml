@@ -4,14 +4,12 @@
     <string name="company_name">Select Company</string>
 
     <string-array name="country_arrays">
-        <item>A</item>
-        <item>B</item>
-        <item>C</item>
-        <item>D</item>
-        <item>E</item>
-        <item>F</item>
-        <item>G</item>
-        <item>H</item>
+        <item>State Bank of India eKYC</item>
+        <item>Pnjab National Bank eKYC</item>
+        <item>State bank eKYC</item>
+        <item>Whatsapp eKYC</item>
+        <item>Hike eKYC</item>
+        <item>Paytm eKYC</item>
     </string-array>
     <string name="facebook_app_id">2022272331380833</string>
     <string name="fb_login_protocol_scheme">fb2022272331380833</string>

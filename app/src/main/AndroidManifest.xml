@@ -43,11 +43,7 @@
         <activity android:name=".BusinessSignup" />
         <activity android:name=".Verify" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ShareDataActivity" />
 
@@ -56,7 +52,19 @@
             android:authorities="com.facebook.app.FacebookContentProvider2022272331380833"
             android:exported="true" />
 
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Main2Activity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".StepperWizardColor"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

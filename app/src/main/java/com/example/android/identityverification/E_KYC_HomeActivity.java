@@ -9,5 +9,6 @@ public class E_KYC_HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_e_kyc_home);
+        getSupportActionBar().setTitle("eKYC Home");
     }
 }

@@ -41,9 +41,9 @@
                 android:background="@drawable/textarea_border"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pic_1"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
                     android:textSize="@dimen/text_very_small"
                     android:textColor="@color/textColorDark"
                     android:fontFamily="serif"
-                    android:text="Akshit Tyagi"/>
+                    android:text="Subrat Kumar Sahoo"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

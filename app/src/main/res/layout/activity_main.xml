@@ -28,24 +28,24 @@ android:background="@color/blue_grey_900"
             android:padding="5dp">
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher"
+                android:layout_height="40dp"
+                android:src="@drawable/home_pic"
                 android:layout_weight="1"
                 android:tint="@color/grey_3"
                 android:id="@+id/home"
                 />
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher"
+                android:layout_height="40dp"
+                android:src="@drawable/verify_pic"
                 android:layout_weight="1"
                 android:tint="@color/grey_700"
                 android:id="@+id/verify"
                 />
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher"
+                android:layout_height="40dp"
+                android:src="@drawable/more_pic"
                 android:layout_weight="1"
                 android:tint="@color/grey_700"
                 android:id="@+id/more"

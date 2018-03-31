@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/blue_grey_900"
     tools:context="com.example.android.identityverification.E_KYC_HomeActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha=".20"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bck" />
+
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pic_1"
+            android:tint="@color/textColorLight"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -32,27 +33,20 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="65dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#ffffff"
+            android:layout_margin="@dimen/layout_medium_margin"
+            android:background="@color/textColorLight"
             android:entries="@array/country_arrays"
-            android:prompt="@string/company_name"></Spinner>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/company_details_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:orientation="horizontal" />
+            android:padding="@dimen/layout_medium_margin"
+            android:prompt="@string/company_name"/>
 
         <Button
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/mybutton"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/textColorLight"
+            android:textStyle="bold"
+            android:background="@drawable/btn_rounded_green"
             android:text="Submit" />
 
     </LinearLayout>

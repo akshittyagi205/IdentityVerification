@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="serif"
             android:paddingLeft="@dimen/medium_padding"
             android:paddingRight="@dimen/medium_padding"
             android:text="Your Digital Identity card can be use as a verification certificate."
@@ -49,9 +49,9 @@
                     android:padding="@dimen/small_padding">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/ic_launcher" />
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/pic_1" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -60,7 +60,7 @@
                         android:layout_weight="1"
                         android:fontFamily="serif"
                         android:padding="@dimen/small_padding"
-                        android:text="E-Identity  by ERA"
+                        android:text="E-Identity  by IVfy"
                         android:textColor="@color/textColorDark"
                         android:textSize="@dimen/text_medium" />
                 </LinearLayout>
