@@ -42,7 +42,7 @@
         <activity android:name=".E_KYC_HomeActivity" />
         <activity android:name=".BusinessSignup" />
         <activity android:name=".Verify" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".ShareDataActivity" />
 
         <provider
@@ -52,7 +52,7 @@
 
         <activity
             android:name=".Main2Activity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".StepperWizardColor"
             android:screenOrientation="portrait"
@@ -63,7 +63,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BusinessDashboardActivity"></activity>
+        <activity android:name=".BusinessDashboardActivity" />
+        <activity android:name=".KYCFiled"></activity>
     </application>
 
 </manifest>
