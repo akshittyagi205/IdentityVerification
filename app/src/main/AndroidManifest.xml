@@ -64,7 +64,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".BusinessDashboardActivity" />
-        <activity android:name=".KYCFiled"></activity>
+        <activity android:name=".KYCFiled" />
+        <activity android:name=".FillEKYC"></activity>
     </application>
 
 </manifest>

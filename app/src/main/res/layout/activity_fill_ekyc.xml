@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cf"
+    tools:context="com.example.android.identityverification.FillEKYC">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_small_margin"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pic_1"
+            android:tint="@color/textColorLight"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="KYC Form"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/small_padding"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.8"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="Name"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text=":"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="Akshit Tyagi"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/small_padding"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.8"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="UID"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text=":"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/uid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="12345678990"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/small_padding"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.8"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="Gender"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text=":"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="M"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/small_padding"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.8"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="Year of Birth"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text=":"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/yob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="1996"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/small_padding"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.8"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="City"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text=":"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:padding="@dimen/small_padding"
+                android:text="Delhi"
+                android:textColor="@color/textColorLight"
+                android:textSize="@dimen/text_medium" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/submit"
+            android:background="@drawable/btn_rounded_green"
+            android:textColor="@color/textColorLight"
+            android:text="Submit" />
+    </LinearLayout>
+</RelativeLayout>

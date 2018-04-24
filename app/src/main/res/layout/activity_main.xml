@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-android:background="@color/blue_grey_900"
+android:background="@drawable/cf"
     android:layout_height="match_parent"
     tools:context="com.example.android.identityverification.MainActivity">
 
@@ -23,12 +23,13 @@ android:background="@color/blue_grey_900"
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:orientation="horizontal"
             android:padding="5dp">
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
+                android:padding="@dimen/small_padding"
                 android:src="@drawable/home_pic"
                 android:layout_weight="1"
                 android:tint="@color/grey_3"
@@ -36,7 +37,8 @@ android:background="@color/blue_grey_900"
                 />
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
+                android:padding="@dimen/small_padding"
                 android:src="@drawable/verify_pic"
                 android:layout_weight="1"
                 android:tint="@color/grey_700"
@@ -44,7 +46,8 @@ android:background="@color/blue_grey_900"
                 />
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
+                android:padding="@dimen/small_padding"
                 android:src="@drawable/more_pic"
                 android:layout_weight="1"
                 android:tint="@color/grey_700"

@@ -1,6 +1,8 @@
 package com.example.android.identityverification;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     Fragment fragment;
     ImageView home,verify,more;
     Bundle extra;
-
+    public static final String MyPREFERENCES = "MyPrefs" ;
     String output;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         extra = getIntent().getExtras();
         getSupportActionBar().setTitle("Home");
         output = extra.getString("output");
+        SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString("output",output);
+        editor.commit();
         home = (ImageView) findViewById(R.id.home);
         verify = (ImageView) findViewById(R.id.verify);
         more = (ImageView) findViewById(R.id.more);

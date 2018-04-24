@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_grey_900"
+    android:background="@drawable/cf"
     tools:context="com.example.android.identityverification.E_KYC_HomeActivity">
 
 
@@ -35,8 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/layout_medium_margin"
             android:background="@color/textColorLight"
-            android:entries="@array/country_arrays"
             android:padding="@dimen/layout_medium_margin"
+            android:id="@+id/spinner"
             android:prompt="@string/company_name"/>
 
         <Button
@@ -44,6 +44,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
+            android:id="@+id/submit"
             android:textColor="@color/textColorLight"
             android:textStyle="bold"
             android:background="@drawable/btn_rounded_green"

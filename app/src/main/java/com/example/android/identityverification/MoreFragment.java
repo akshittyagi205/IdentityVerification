@@ -2,6 +2,7 @@ package com.example.android.identityverification;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,9 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import static com.example.android.identityverification.MainActivity.MyPREFERENCES;
+
 public class MoreFragment extends Fragment {
 
-    TextView fill_E_KYC;
+    TextView fill_E_KYC,businessLogin,businessSignup;
 
     private OnFragmentInteractionListener mListener;
 
@@ -45,6 +48,27 @@ public class MoreFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(),E_KYC_HomeActivity.class));
+            }
+        });
+        businessLogin = (TextView) rootView.findViewById(R.id.businessLogin);
+        businessLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences sharedpreferences = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+                int loggedinflag=sharedpreferences.getInt("isloggedin",0);
+//                if(loggedinflag==0){
+//                    startActivity(new Intent(getActivity(),HomeActivity.class));
+//                }else{
+//
+//                }
+                startActivity(new Intent(getActivity(),HomeActivity.class));
+            }
+        });
+        businessSignup = (TextView) rootView.findViewById(R.id.businessSignup);
+        businessSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),SignUpActivity.class));
             }
         });
 

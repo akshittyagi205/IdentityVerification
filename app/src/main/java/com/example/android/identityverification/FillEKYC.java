@@ -7,9 +7,8 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -20,71 +19,60 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static com.example.android.identityverification.MainActivity.MyPREFERENCES;
 
-public class E_KYC_HomeActivity extends AppCompatActivity {
+public class FillEKYC extends AppCompatActivity {
 
-    List<String> spinnerarray;
-    List<String> businessId;
-    Spinner spinner;
-    ArrayAdapter<String> adapter;
+    TextView name,uid,gender,yob,city;
     Button submit;
+    String output,id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_e_kyc_home);
-        getSupportActionBar().setTitle("eKYC Home");
-        spinnerarray = new ArrayList<>();
-        businessId = new ArrayList<>();
+        setContentView(R.layout.activity_fill_ekyc);
+        Bundle extras = getIntent().getExtras();
+        id = extras.getString("id");
+        name = (TextView) findViewById(R.id.name);
+        uid = (TextView) findViewById(R.id.uid);
+        gender = (TextView) findViewById(R.id.gender);
+        yob = (TextView) findViewById(R.id.yob);
+        city = (TextView) findViewById(R.id.city);
         submit = (Button) findViewById(R.id.submit);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,spinnerarray);
-        spinner = (Spinner) findViewById(R.id.spinner);
-        spinner.setAdapter(adapter);
-        spinner.getSelectedItemPosition();
-        sendR();
+        SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        output=sharedpreferences.getString("output","null");
+        name.setText(output.split("=")[2].split(",")[0]);
+        yob.setText(output.split("=")[4].split(",")[0]);
+        gender.setText(output.split("=")[3].split(",")[0]);
+        city.setText(output.split("=")[11].split(",")[0]);
+        uid.setText(output.split("=")[1].split(",")[0]);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int id = spinner.getSelectedItemPosition();
-                Intent i = new Intent(E_KYC_HomeActivity.this,FillEKYC.class);
-                i.putExtra("id",businessId.get(id));
-                startActivity(i);
+                sendR();
             }
         });
     }
 
     public void sendR() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Setting up things...");
+        progressDialog.setMessage("Signing Up...");
         progressDialog.show();
-        String url = "https://identityverifyapp.herokuapp.com/getbusinessnames/";
+        String url = "https://identityverifyapp.herokuapp.com/fillekyc/";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         progressDialog.dismiss();
-                        try {
-                            JSONArray ar = new JSONArray(response);
-                            for(int i=0;i<ar.length();i++){
-                                JSONObject ob = ar.getJSONObject(i);
-                                spinnerarray.add(ob.getString("name"));
-                                businessId.add(ob.getString("id"));
-                            }
-                            adapter.notifyDataSetChanged();
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                        if(response.equalsIgnoreCase("data saved")){
+                            Toast.makeText(getApplicationContext(),"KYC Filled Successfully!",Toast.LENGTH_SHORT).show();
+                            finish();
+                        }else{
+                            Toast.makeText(getApplicationContext(),"Some error occured!",Toast.LENGTH_SHORT).show();
                         }
-
 
                     }
                 },
@@ -99,6 +87,8 @@ public class E_KYC_HomeActivity extends AppCompatActivity {
             @Override
             protected Map<String,String> getParams(){
                 Map<String, String> params = new HashMap<>();
+                params.put("id",id);
+                params.put("data",output);
                 return params;
             }
 
@@ -114,5 +104,4 @@ public class E_KYC_HomeActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
-
 }

@@ -2,6 +2,7 @@ package com.example.android.identityverification;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Build;
@@ -19,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import static com.example.android.identityverification.MainActivity.MyPREFERENCES;
 
 
 public class StepperWizardColor extends AppCompatActivity {
@@ -82,16 +85,34 @@ public class StepperWizardColor extends AppCompatActivity {
         btn_got_it.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-                startActivity(new Intent(StepperWizardColor.this,Main2Activity.class));
+                SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+                String output = sharedpreferences.getString("output","empty");
+                if(output.equals("empty")) {
+                    finish();
+                    startActivity(new Intent(StepperWizardColor.this, Main2Activity.class));
+                }else{
+                    Intent i = new Intent(StepperWizardColor.this, MainActivity.class);
+                    i.putExtra("output",output);
+                    finish();
+                    startActivity(i);
+                }
             }
         });
 
         ((Button) findViewById(R.id.btn_skip)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-                startActivity(new Intent(StepperWizardColor.this,Main2Activity.class));
+                SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+                String output = sharedpreferences.getString("output","empty");
+                if(output.equals("empty")) {
+                    finish();
+                    startActivity(new Intent(StepperWizardColor.this, Main2Activity.class));
+                }else{
+                    Intent i = new Intent(StepperWizardColor.this, MainActivity.class);
+                    i.putExtra("output",output);
+                    finish();
+                    startActivity(i);
+                }
             }
         });
     }
