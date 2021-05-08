@@ -2,7 +2,7 @@ name: Release app > Playstore
 on:
   push:
     branches:
-      - release
+      - master
 
 jobs:
   build:
